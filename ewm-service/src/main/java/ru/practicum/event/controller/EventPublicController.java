@@ -31,12 +31,8 @@ public class EventPublicController {
     public Collection<EventDto> getAllPublic(@RequestParam(required = false, defaultValue = "") String text,
                                              @RequestParam(required = false, defaultValue = "") List<Long> categories,
                                              @RequestParam(required = false) Boolean paid,
-                                             @RequestParam(required = false)
-                                                 @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-                                                 LocalDateTime rangeStart,
-                                             @RequestParam(required = false)
-                                                 @FutureOrPresent @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-                                                 LocalDateTime rangeEnd,
+                                             @RequestParam(required = false) @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss") LocalDateTime rangeStart,
+                                             @RequestParam(required = false) @FutureOrPresent @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss") LocalDateTime rangeEnd,
                                              @RequestParam(defaultValue = "false") boolean onlyAvailable,
                                              @RequestParam(required = false) String sort,
                                              @PositiveOrZero @RequestParam(defaultValue = "0") int from,
